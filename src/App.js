@@ -3,7 +3,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import axios from 'axios';
 import './App.css';
 
-const API = 'http://localhost:8080/api';
+const API = process.env.REACT_APP_API_URL || 'http://localhost:8080/api';
 
 function StatusBadge({ status }) {
   const color = status === 'NOMINAL' ? '#4ade80' : '#ef4444';
